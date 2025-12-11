@@ -63,7 +63,7 @@ export default async function BasketPage() {
                 <div className="flex flex-col lg:flex-row gap-8">
                     <div className="lg:w-2/3">
                         <div className="bg-white rounded-lg shadow-sm border overflow-hidden">
-                            {cart.items.map((item) => (
+                            {cart.items.map((item: any) => (
                                 <div key={item.id} className="flex gap-4 p-4 border-b last:border-b-0 hover:bg-gray-50 transition-colors">
                                     <div className="relative w-24 h-24 flex-shrink-0 bg-white border rounded-md p-1">
                                         <img
