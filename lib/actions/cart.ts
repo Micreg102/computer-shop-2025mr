@@ -130,7 +130,7 @@ export async function transferCart(fromUserId: string, toUserId: string) {
     }
 
     try {
-        await prisma.$transaction(async (tx) => {
+        await prisma.$transaction(async (tx: any) => {
 
             const sourceCart = await tx.cart.findUnique({
                 where: { userId: fromUserId },
