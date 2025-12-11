@@ -104,7 +104,7 @@ export async function getCartTotal(userId: string) {
         return 0;
     }
 
-    const total = cart.items.reduce((sum, item) => {
+    const total = cart.items.reduce((sum: number, item: any) => {
         return sum + (item.product.price * item.amount);
     }, 0);
 
